@@ -1,0 +1,37 @@
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+
+.nav-bar {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.product-table {
+   display: flex; 
+    justify-content: space-around;
+    flex-direction: row;
+    margin-top: 50px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.footer-box {
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 15px;
+    width: 300px;
+}
+
+.footer-box a:hover {
+    color: red;
+}

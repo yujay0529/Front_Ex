@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>first-child 선택자</title>
+		<style type="text/css">
+			#content div { /* content의 모든 자손 <div>  */
+				width:400px;
+				height:50px;
+				border:solid 1px black; 
+			}
+			
+			#content div:first-child{   /* 첫 번째 자손 <div> */
+				background:skyblue; 
+			}
+			
+			#content div:first-child + div {   /* 두 번째 자손<div>  */
+				background:green; 
+			}
+			
+			#content div:nth-child(3) {   /*세 번째 자손<div>  */
+				background:gold; 
+			}
+			
+			#content div:nth-child(4) {   /*네 번째 자손<div>  */
+				background:pink; 
+			}
+			
+			/* 띄어 쓰기 주의! div:first-child, div:nth-child 에서 콜론(:)  앞 뒤로 띄어 쓰기 하면 안 됨 */
+		
+		</style>
+	</head>
+	<body>
+		<div id="content">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</body>
+</html>
