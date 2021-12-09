@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>자바스크립트 매개변수가 있는 함수 연습문제</title>
+		<script type="text/javascript">
+			
+			function input() {
+				var rows = prompt("테이블의 행 수 입력");
+				var cols = prompt("테이블의 열 수 입력");
+				makeTable(rows, cols);
+			}
+			
+			// 매개변수가 있는 함수 
+			function makeTable(rows, cols) {
+				document.write('<table border="1">')
+				for (let i=1; i<=rows; i++) {   // 행 수 만큼 반복
+					document.write('<tr>');
+					for (let j=1; j<=cols; j++) {   // 각 행마다 열 수 만큼 반복
+						document.write('<td>★</td>');
+					}
+					document.write('</tr>');
+				}
+				document.write('</table>')
+			}
+		</script>
+
+	</head>
+	<body>
+		<button onClick="input()">테이블 만들기</button>
+	</body>
+</html>

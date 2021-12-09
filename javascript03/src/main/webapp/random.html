@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>이미지랜덤</title>
+		<script type ="text/javascript">
+		var image = new Array();
+		image[0] = "image/그림1.jpg";
+		image[1] = "image/그림2.jpg";
+		image[2] = "image/그림3.jpg";
+
+		index = Math.floor(Math.random() * image.length);
+		document.write("<img src='"+image[index]+"' border=0>");
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>
