@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>json데이터파싱</title>
+		<script type ="text/javascript">
+		var result = {"version":"v2","userId":"U47b00b58c90f8e47428af8b7bddc1231heo2","timestamp":1621444015108,"bubbles":[{"type":"text","data":{"description":"저는 독서 지도사입니다"},"information":[{"key":"chatType","value":"TEXT"},{"key":"chatType","value":"TEXT"},{"key":"score","value":"1.0"},{"key":"scenarioName","value":"자기 소개"},{"key":"conversationTypes","value":"소개␞직업␞일␞역할␞담당␞누구"},{"key":"matchingType","value":"exactMatch"},{"key":"domainCode","value":"ai_chatbot_ex"}],"context":[]}],"scenario":{"name":"자기 소개","chatUtteranceSetId":3305931,"intent":["소개","직업","일","역할","담당","누구"]},"entities":[],"keywords":[],"event":"send"};
+		console.log(result);
+		
+		var bubbles = result.bubbles;
+		for(var i in bubbles){
+			console.log(bubbles[i].data.description);
+		}
+		console.log(result.scenario.name);
+		
+		var intent = result.scenario.intent;
+		for(var i in intent){
+			console.log(intent[i]);
+		}
+
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>
