@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <link href="./chatbot.css" rel="stylesheet">
+    <script src="./chatbot.js" type="text/js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="wrap">
+        <div id="chatHeader">
+            <span>챗봇</span>
+            <button id="closeBtn">닫기(X)</button>
+        </div>
+
+        <div id="chatBox"></div>
+
+        <div>
+            <form id="chatForm" method="post">
+                <input type="text" id="message" name="message" size="30"
+                        placeholder="질문을 입력하세요" autofocus>
+                <input type="submit" id="submitBtn" value="전송">
+            </form>
+        </div>
+    </div>
+
+    <script>
+       $(document).ready(function() {
+            $('#chatForm').on('submit', function(){
+                event.preventDefault();
+                // message 입력하고 [전송] 버튼 누르면 (엔터쳐도 됨)
+                // chatBox에 보낸 메시지 추가
+                if($('#message').val() != ""){
+                    $('#chatBox').append('<div><div class="msgBox send">' + 
+                                                        $('#message').val() + '</div></div><br>');
+                }
+
+                $("#message").val('')
+
+                getResponse()
+                
+            });
+
+            function getResponse() {
+                let result = "우아ㅏ아아아아아ㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏ"
+
+                $('#chatBox').append('챗봇<br><div><div class="msgBox receive">' + 
+                                        result + '</div></div><br>');
+                
+                $("#chatBox").scrollTop($("#chatBox").prop("scrollHeight"));
+            }
+
+        });
+    </script>
+</body>
+</html>
